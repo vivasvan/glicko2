@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="RestSharp" Version="106.6.10" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.2.0" />
+    <PackageReference Include="Json.Net" Version="1.0.16" />
+    <PackageReference Include="MySql.Data" Version="8.0.19" />
+    <PackageReference Include="Lightstreamer.DotNet.Client" Version="3.1.6640.22649" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="appsettings.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Client\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Clients\IApiDeletable.cs" />
+    <Compile Remove="Clients\ApiGettable.cs" />
+    <Compile Remove="Clients\ApiPostable.cs" />
+    <Compile Remove="Clients\ApiPutable.cs" />
+    <Compile Remove="Clients\IEndpointMap.cs" />
+  </ItemGroup>
+</Project>
